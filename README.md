@@ -21,7 +21,7 @@ Berikut library-library yang digunakan pada program ini.
 
 # Hasil
 | No | topic | country | woeid | duration (minutes) |
-| -- | ----- | ------- | ----- | -------- |
+| -- | ----- | ------- | ----- | -------: |
 1 | #B430TS1 | Singapore | 23424948 | 40.0 |
 2 | #B430TS1 | Thailand | 23424960 | 19.0 |
 3 | #ELEVEN1stWin | Indonesia | 23424846 | 149.0 |
