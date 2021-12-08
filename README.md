@@ -14,7 +14,7 @@ Berikut library-library yang digunakan pada program ini.
 | `pandas` | menyimpan data sebagai DataFrame dan melakukan perhitungan durasi trending |
 | `tweepy` | mengambil data trending dari aplikasi Twitter |
 | `sqlalchemy.create_engine` | menghubungkan database supaya dapat berkomunikasi dengan database melalui program yang dibuat |
-| `datetime.datetime` | membuat format datetime pada `default_argument` pada saat membuat DAG |
+| `datetime.datetime` | membuat format datetime pada `start_date` di `default_args` pada saat membuat DAG |
 | `airflow.models.DAG` | membuat DAG pada Airflow |
 | `airflow.models.Variable` | memanggil variable yang dibuat pada Airflow |
 | `airflow.operators.python_operator.PythonOperator` | membuat task yang dibuat dalam program Python |
