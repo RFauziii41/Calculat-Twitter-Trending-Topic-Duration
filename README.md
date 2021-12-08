@@ -20,7 +20,7 @@ Berikut library-library yang digunakan pada program ini.
 | `airflow.operators.python_operator.PythonOperator` | membuat task yang dibuat dalam program Python |
 
 # Hasil
-| No | topic | country | woeid | duration |
+| No | topic | country | woeid | duration (minutes) |
 | -- | ----- | ------- | ----- | -------- |
 1 | #B430TS1 | Singapore | 23424948 | 40.0 |
 2 | #B430TS1 | Thailand | 23424960 | 19.0 |
