@@ -1,0 +1,99 @@
+[2021-12-08 17:10:05,690] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: calculate_twitter_trending_topic_duration.calculate_time_trending scheduled__2021-12-08T10:05:00+00:00 [queued]>
+[2021-12-08 17:10:05,698] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: calculate_twitter_trending_topic_duration.calculate_time_trending scheduled__2021-12-08T10:05:00+00:00 [queued]>
+[2021-12-08 17:10:05,698] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-08 17:10:05,698] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2021-12-08 17:10:05,699] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-08 17:10:05,708] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): calculate_time_trending> on 2021-12-08 10:05:00+00:00
+[2021-12-08 17:10:05,768] {standard_task_runner.py:52} INFO - Started process 12544 to run task
+[2021-12-08 17:10:05,774] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'calculate_twitter_trending_topic_duration', 'calculate_time_trending', 'scheduled__2021-12-08T10:05:00+00:00', '--job-id', '571', '--raw', '--subdir', 'DAGS_FOLDER/trending_tweet.py', '--cfg-path', '/tmp/tmp_ztoghsl', '--error-file', '/tmp/tmpr6jvxuyn']
+[2021-12-08 17:10:05,776] {standard_task_runner.py:77} INFO - Job 571: Subtask calculate_time_trending
+[2021-12-08 17:10:05,843] {logging_mixin.py:109} INFO - Running <TaskInstance: calculate_twitter_trending_topic_duration.calculate_time_trending scheduled__2021-12-08T10:05:00+00:00 [running]> on host LAPTOP-816OFLVR.localdomain
+[2021-12-08 17:10:05,888] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/xcom.py:323 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` flag is not set to True.  Set this flag to True if this type object's state is safe to use in a cache key, or False to disable this warning.
+[2021-12-08 17:10:05,909] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:126 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` flag is not set to True.  Set this flag to True if this type object's state is safe to use in a cache key, or False to disable this warning.
+[2021-12-08 17:10:05,917] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:162 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2021-12-08 17:10:05,932] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:159 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` flag is not set to True.  Set this flag to True if this type object's state is safe to use in a cache key, or False to disable this warning.
+[2021-12-08 17:10:05,936] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Reza
+AIRFLOW_CTX_DAG_ID=calculate_twitter_trending_topic_duration
+AIRFLOW_CTX_TASK_ID=calculate_time_trending
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-08T10:05:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-08T10:05:00+00:00
+[2021-12-08 17:10:05,969] {logging_mixin.py:109} INFO -                       topic      country     woeid                 created_at                 stopped_at
+0                     AYATO     Malaysia  23424901 2021-12-08 12:20:03.241233 2021-12-08 12:30:03.351502
+1                     AYATO  Philippines  23424934 2021-12-08 12:20:03.242627 2021-12-08 12:30:03.352633
+2                     AYATO    Indonesia  23424846 2021-12-08 12:20:03.227287 2021-12-08 12:35:03.926857
+3                     AYATO    Singapore  23424948 2021-12-08 12:20:03.243477 2021-12-08 12:35:03.927715
+4                     Ayato  Philippines  23424934 2021-12-08 12:30:03.349903 2021-12-08 13:25:04.443210
+5                     Ayato    Indonesia  23424846 2021-12-08 12:35:03.917894 2021-12-08 13:35:04.017976
+6                     Ayato     Malaysia  23424901 2021-12-08 12:30:03.343197 2021-12-08 13:55:03.399924
+7                #แบนSITALA     Thailand  23424960 2021-12-08 12:20:03.244242 2021-12-08 14:00:04.132968
+8                    #kookv     Thailand  23424960 2021-12-08 14:00:04.125976 2021-12-08 14:25:03.232749
+9                   TAEKOOK    Indonesia  23424846 2021-12-08 13:35:04.011542 2021-12-08 15:05:03.845543
+10                    Ayato    Singapore  23424948 2021-12-08 12:35:03.925795 2021-12-08 15:10:03.416630
+11                  TAEKOOK  Philippines  23424934 2021-12-08 13:25:04.435071 2021-12-08 15:10:03.417529
+12                  TAEKOOK     Malaysia  23424901 2021-12-08 13:55:03.391634 2021-12-08 15:10:03.418559
+13                  taekook    Indonesia  23424846 2021-12-08 15:05:03.839208 2021-12-08 15:15:03.989914
+14                  taekook    Singapore  23424948 2021-12-08 15:10:03.415882 2021-12-08 15:30:03.635592
+15               #แบนSITALA     Thailand  23424960 2021-12-08 14:25:03.225249 2021-12-08 15:40:03.717533
+16                  taekook     Malaysia  23424901 2021-12-08 15:10:03.407919 2021-12-08 15:45:03.681171
+17                  taekook  Philippines  23424934 2021-12-08 15:10:03.414450 2021-12-08 15:45:03.682115
+18                  Taekook     Malaysia  23424901 2021-12-08 15:45:03.673481 2021-12-08 15:50:03.948635
+19                    Ayato    Singapore  23424948 2021-12-08 15:30:03.629496 2021-12-08 15:55:03.140653
+20                  TAEKOOK  Philippines  23424934 2021-12-08 15:45:03.679989 2021-12-08 15:55:03.141615
+21                  TAEKOOK     Malaysia  23424901 2021-12-08 15:50:03.942325 2021-12-08 15:55:03.142353
+22                 #B430TS1     Thailand  23424960 2021-12-08 15:40:03.711044 2021-12-08 16:00:03.135330
+23                  taekook     Malaysia  23424901 2021-12-08 15:55:03.131832 2021-12-08 16:05:03.918702
+24  #InovasiTelkomIndofarma    Indonesia  23424846 2021-12-08 15:15:03.983904 2021-12-08 16:20:05.635653
+25        #TRUZMentionParty    Indonesia  23424846 2021-12-08 16:20:05.628921 2021-12-08 16:25:04.102118
+26            #ELEVEN1stWin    Indonesia  23424846 2021-12-08 16:30:08.902469 2021-12-08 17:10:05.960534
+27            #ELEVEN1stWin     Malaysia  23424901 2021-12-08 16:30:08.909347 2021-12-08 17:10:05.960578
+28                  taekook  Philippines  23424934 2021-12-08 15:55:03.138551 2021-12-08 16:30:08.911323
+29                    Ayato     Malaysia  23424901 2021-12-08 16:05:03.912462 2021-12-08 16:30:08.912535
+30                 #Hawkeye    Indonesia  23424846 2021-12-08 16:25:04.095066 2021-12-08 16:30:08.913601
+31                 #B430TS1    Singapore  23424948 2021-12-08 15:55:03.139728 2021-12-08 16:35:03.684573
+32            #ELEVEN1stWin  Philippines  23424934 2021-12-08 16:40:03.821857 2021-12-08 17:10:05.960583
+33               #IVE1stWin  Philippines  23424934 2021-12-08 16:30:08.910395 2021-12-08 16:40:03.827906
+34            #ELEVEN1stWin    Singapore  23424948 2021-12-08 16:35:03.678161 2021-12-08 17:00:03.839252
+35            #ELEVEN1stWin    Singapore  23424948 2021-12-08 17:05:03.518789 2021-12-08 17:10:05.960586
+36    #Lazada1212XBrightWin     Thailand  23424960 2021-12-08 17:05:03.524764 2021-12-08 17:10:05.960589
+37               #แบนSITALA     Thailand  23424960 2021-12-08 16:00:03.128972 2021-12-08 17:05:03.525886
+38               #IVE1stWin    Singapore  23424948 2021-12-08 17:00:03.833255 2021-12-08 17:05:03.527007
+[2021-12-08 17:10:05,979] {logging_mixin.py:109} INFO -                       topic      country     woeid  duration
+0                  #B430TS1    Singapore  23424948      40.0
+1                  #B430TS1     Thailand  23424960      19.0
+2             #ELEVEN1stWin    Indonesia  23424846      39.0
+3             #ELEVEN1stWin     Malaysia  23424901      39.0
+4             #ELEVEN1stWin  Philippines  23424934      30.0
+5             #ELEVEN1stWin    Singapore  23424948      30.0
+6                  #Hawkeye    Indonesia  23424846       5.0
+7                #IVE1stWin  Philippines  23424934       9.0
+8                #IVE1stWin    Singapore  23424948       4.0
+9   #InovasiTelkomIndofarma    Indonesia  23424846      65.0
+10    #Lazada1212XBrightWin     Thailand  23424960       5.0
+11        #TRUZMentionParty    Indonesia  23424846       4.0
+12                   #kookv     Thailand  23424960      24.0
+13               #แบนSITALA     Thailand  23424960     240.0
+14                    AYATO    Indonesia  23424846      15.0
+15                    AYATO     Malaysia  23424901      10.0
+16                    AYATO  Philippines  23424934      10.0
+17                    AYATO    Singapore  23424948      15.0
+18                    Ayato    Indonesia  23424846      60.0
+19                    Ayato     Malaysia  23424901     110.0
+20                    Ayato  Philippines  23424934      55.0
+21                    Ayato    Singapore  23424948     178.0
+22                  TAEKOOK    Indonesia  23424846      89.0
+23                  TAEKOOK     Malaysia  23424901      79.0
+24                  TAEKOOK  Philippines  23424934     113.0
+25                  Taekook     Malaysia  23424901       5.0
+26                  taekook    Indonesia  23424846      10.0
+27                  taekook     Malaysia  23424901      45.0
+28                  taekook  Philippines  23424934      70.0
+29                  taekook    Singapore  23424948      20.0
+[2021-12-08 17:10:05,979] {python.py:152} INFO - Done. Returned value was: None
+[2021-12-08 17:10:06,000] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=calculate_twitter_trending_topic_duration, task_id=calculate_time_trending, execution_date=20211208T100500, start_date=20211208T101005, end_date=20211208T101006
+[2021-12-08 17:10:06,031] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-08 17:10:06,089] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-12-08 17:10:06,091] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/dag.py:1076 SADeprecationWarning: Query.value() is deprecated and will be removed in a future release.  Please use Query.with_entities() in combination with Query.scalar() (deprecated since: 1.4)
+[2021-12-08 17:10:06,092] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/dag.py:1076 SADeprecationWarning: Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)

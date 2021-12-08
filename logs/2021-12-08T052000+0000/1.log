@@ -1,0 +1,34 @@
+[2021-12-08 12:25:05,235] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: calculate_twitter_trending_topic_duration.calculate_time_trending scheduled__2021-12-08T05:20:00+00:00 [queued]>
+[2021-12-08 12:25:05,242] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: calculate_twitter_trending_topic_duration.calculate_time_trending scheduled__2021-12-08T05:20:00+00:00 [queued]>
+[2021-12-08 12:25:05,242] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-08 12:25:05,242] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2021-12-08 12:25:05,242] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-08 12:25:05,257] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): calculate_time_trending> on 2021-12-08 05:20:00+00:00
+[2021-12-08 12:25:05,310] {standard_task_runner.py:52} INFO - Started process 18387 to run task
+[2021-12-08 12:25:05,315] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'calculate_twitter_trending_topic_duration', 'calculate_time_trending', 'scheduled__2021-12-08T05:20:00+00:00', '--job-id', '457', '--raw', '--subdir', 'DAGS_FOLDER/trending_tweet.py', '--cfg-path', '/tmp/tmp95emmg3g', '--error-file', '/tmp/tmpe7k1au8b']
+[2021-12-08 12:25:05,316] {standard_task_runner.py:77} INFO - Job 457: Subtask calculate_time_trending
+[2021-12-08 12:25:05,391] {logging_mixin.py:109} INFO - Running <TaskInstance: calculate_twitter_trending_topic_duration.calculate_time_trending scheduled__2021-12-08T05:20:00+00:00 [running]> on host LAPTOP-816OFLVR.localdomain
+[2021-12-08 12:25:05,451] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/xcom.py:323 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` flag is not set to True.  Set this flag to True if this type object's state is safe to use in a cache key, or False to disable this warning.
+[2021-12-08 12:25:05,472] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:126 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` flag is not set to True.  Set this flag to True if this type object's state is safe to use in a cache key, or False to disable this warning.
+[2021-12-08 12:25:05,484] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:162 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2021-12-08 12:25:05,500] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:159 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` flag is not set to True.  Set this flag to True if this type object's state is safe to use in a cache key, or False to disable this warning.
+[2021-12-08 12:25:05,504] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Reza
+AIRFLOW_CTX_DAG_ID=calculate_twitter_trending_topic_duration
+AIRFLOW_CTX_TASK_ID=calculate_time_trending
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-08T05:20:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-08T05:20:00+00:00
+[2021-12-08 12:25:05,529] {logging_mixin.py:109} INFO - Empty DataFrame
+Columns: [topic, country, woeid, created_at, stopped_at]
+Index: []
+[2021-12-08 12:25:05,534] {logging_mixin.py:109} INFO - Empty DataFrame
+Columns: [topic, country, woeid]
+Index: []
+[2021-12-08 12:25:05,534] {python.py:152} INFO - Done. Returned value was: None
+[2021-12-08 12:25:05,555] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=calculate_twitter_trending_topic_duration, task_id=calculate_time_trending, execution_date=20211208T052000, start_date=20211208T052505, end_date=20211208T052505
+[2021-12-08 12:25:05,571] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-08 12:25:05,626] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-12-08 12:25:05,629] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/dag.py:1076 SADeprecationWarning: Query.value() is deprecated and will be removed in a future release.  Please use Query.with_entities() in combination with Query.scalar() (deprecated since: 1.4)
+[2021-12-08 12:25:05,629] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/dag.py:1076 SADeprecationWarning: Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)

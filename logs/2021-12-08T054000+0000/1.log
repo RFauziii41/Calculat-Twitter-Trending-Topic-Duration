@@ -1,0 +1,38 @@
+[2021-12-08 12:45:09,563] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: calculate_twitter_trending_topic_duration.calculate_time_trending scheduled__2021-12-08T05:40:00+00:00 [queued]>
+[2021-12-08 12:45:09,570] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: calculate_twitter_trending_topic_duration.calculate_time_trending scheduled__2021-12-08T05:40:00+00:00 [queued]>
+[2021-12-08 12:45:09,570] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-08 12:45:09,570] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2021-12-08 12:45:09,570] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-08 12:45:09,586] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): calculate_time_trending> on 2021-12-08 05:40:00+00:00
+[2021-12-08 12:45:09,639] {standard_task_runner.py:52} INFO - Started process 27247 to run task
+[2021-12-08 12:45:09,644] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'calculate_twitter_trending_topic_duration', 'calculate_time_trending', 'scheduled__2021-12-08T05:40:00+00:00', '--job-id', '465', '--raw', '--subdir', 'DAGS_FOLDER/trending_tweet.py', '--cfg-path', '/tmp/tmp4r6zco6t', '--error-file', '/tmp/tmpu5maebio']
+[2021-12-08 12:45:09,646] {standard_task_runner.py:77} INFO - Job 465: Subtask calculate_time_trending
+[2021-12-08 12:45:09,723] {logging_mixin.py:109} INFO - Running <TaskInstance: calculate_twitter_trending_topic_duration.calculate_time_trending scheduled__2021-12-08T05:40:00+00:00 [running]> on host LAPTOP-816OFLVR.localdomain
+[2021-12-08 12:45:09,780] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/xcom.py:323 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` flag is not set to True.  Set this flag to True if this type object's state is safe to use in a cache key, or False to disable this warning.
+[2021-12-08 12:45:09,800] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:126 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` flag is not set to True.  Set this flag to True if this type object's state is safe to use in a cache key, or False to disable this warning.
+[2021-12-08 12:45:09,814] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:162 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2021-12-08 12:45:09,831] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:159 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` flag is not set to True.  Set this flag to True if this type object's state is safe to use in a cache key, or False to disable this warning.
+[2021-12-08 12:45:09,834] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Reza
+AIRFLOW_CTX_DAG_ID=calculate_twitter_trending_topic_duration
+AIRFLOW_CTX_TASK_ID=calculate_time_trending
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-08T05:40:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-08T05:40:00+00:00
+[2021-12-08 12:45:09,863] {logging_mixin.py:109} INFO -    topic      country     woeid                 created_at                 stopped_at
+0  AYATO     Malaysia  23424901 2021-12-08 12:20:03.241233 2021-12-08 12:30:03.351502
+1  AYATO  Philippines  23424934 2021-12-08 12:20:03.242627 2021-12-08 12:30:03.352633
+2  AYATO    Indonesia  23424846 2021-12-08 12:20:03.227287 2021-12-08 12:35:03.926857
+3  AYATO    Singapore  23424948 2021-12-08 12:20:03.243477 2021-12-08 12:35:03.927715
+[2021-12-08 12:45:09,871] {logging_mixin.py:109} INFO -    topic      country     woeid  duration
+0  AYATO    Indonesia  23424846      15.0
+1  AYATO     Malaysia  23424901      10.0
+2  AYATO  Philippines  23424934      10.0
+3  AYATO    Singapore  23424948      15.0
+[2021-12-08 12:45:09,871] {python.py:152} INFO - Done. Returned value was: None
+[2021-12-08 12:45:09,892] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=calculate_twitter_trending_topic_duration, task_id=calculate_time_trending, execution_date=20211208T054000, start_date=20211208T054509, end_date=20211208T054509
+[2021-12-08 12:45:09,938] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-08 12:45:09,996] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-12-08 12:45:09,998] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/dag.py:1076 SADeprecationWarning: Query.value() is deprecated and will be removed in a future release.  Please use Query.with_entities() in combination with Query.scalar() (deprecated since: 1.4)
+[2021-12-08 12:45:09,999] {logging_mixin.py:109} WARNING - /home/reza/.local/lib/python3.8/site-packages/airflow/models/dag.py:1076 SADeprecationWarning: Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)
