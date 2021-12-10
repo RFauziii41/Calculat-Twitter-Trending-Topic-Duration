@@ -25,7 +25,7 @@ Columns: [topic, country, woeid, created_at, stopped_at]
 Index: []
 [2021-12-08 12:20:04,956] {logging_mixin.py:109} INFO - Empty DataFrame
 Columns: [topic, country, woeid]
-Index: []
+Index: []=
 [2021-12-08 12:20:04,956] {python.py:152} INFO - Done. Returned value was: None
 [2021-12-08 12:20:04,980] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=calculate_twitter_trending_topic_duration, task_id=calculate_time_trending, execution_date=20211208T051500, start_date=20211208T052004, end_date=20211208T052004
 [2021-12-08 12:20:04,994] {local_task_job.py:154} INFO - Task exited with return code 0
