@@ -154,6 +154,3 @@ with DAG(
     )
 
     py_task1 >> py_task2
-
-#collect_store_data()
-#cal_duration()
